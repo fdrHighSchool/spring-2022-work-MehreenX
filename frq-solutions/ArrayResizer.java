@@ -1,22 +1,42 @@
+import java.util.*;
+
 public class ArrayResizer{
-  pulic static void main(String[] args){
-    
+  public static void main(String[] args){
+    int[][] array2D = {{2,1,0},{1,3,2},{0,0,0},{4,5,6}};
+    System.out.println(Arrays.deepToString(resize(array2D)));
 
   }//end main
-  public static boolean isNonZeroRow(int[][]array2D,int r){
-    for(int x : array2D[r]){
-      for(x==0){
-        return "false";
-      }
-      if else{
-        return "true"
+
+  public static boolean isNonZeroRow(int[][] array2D,int r){
+    for(int i = 0; i<array2D[0].length;i++){
+      if(array2D[r][i] == 0){
+        return false;
       }
     }
+    return true;
+
   }//end isNonZeroRow
-  public static int[][] array2D){
-    int numRow =array2D.length;
-    intCols = array2D[0].length;
 
+  public static int numNonZeroRows(int[][] array2D){
+    int count = 0;
+    for(int i = 0;i<array2D.length;i++){
+      if(isNonZeroRow(array2D,i)){
+        count++;
+      }
+    }
+    return count;
+  }//end numNonZeroRows
 
+  public static int[][] resize(int[][] array2D){
+    int[][] listSized = new int [numNonZeroRows(array2D)][array2D[0].length];
+    int row = 0;
+    for(int i = 0; i<array2D.length;i++){
+      if(isNonZeroRow(array2D,i)){
+        listSized[row] = array2D[i];
+        row++;
+      }
+    }
+    return listSized;
   }
-}end class
+
+}//end class
