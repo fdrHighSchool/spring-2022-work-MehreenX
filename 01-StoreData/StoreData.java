@@ -2,6 +2,8 @@ public class StoreData{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
+    String id = 
+
     //Student number 1
 
     System.out.println("Please enter the following information for Student #1");
@@ -61,4 +63,9 @@ public class StoreData{
 
 
   }
+}
+
+// for (int suffix = 1; suffix < 5; suffix++) {
+//   if ("contact_" + suffix
+// }
 }
