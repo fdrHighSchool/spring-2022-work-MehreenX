@@ -1,14 +1,48 @@
 public class Student {
-// feilds, instance varaibles (data)
-private String id;
-private String name;
-private boolean closeContact;
-private int [] grades;
+  // fields, instance varaibles (data)
+  // each instance of the Student class gets a copy of each variable
+  private String id;
+  private String name;
+  private boolean closeContact;
+  private int[] grades;
 
-//constructor method
-public student(String id, String
- n, boolean cc, int[] g){
-  tpublic double getAverage() {
+  // constuctor method
+  public Student(String id, String n, boolean cc, int[] g) {
+    this.id = id;
+    this.name = n;
+    this.closeContact = cc;
+    this.grades = g;
+  }
+
+  // behaviors (methods)
+
+  // get the close contact status of the student
+  public boolean getCloseContact() {
+    return this.closeContact;
+  } // end isCloseContact method
+
+  // set the value of close contact
+  public void setCloseContact(boolean value) {
+    if(value){
+    System.out.println(" This person is a Close Contect: " + this.name );
+  }
+
+  }
+
+  // see if the student is failing
+  public boolean isFailing() {
+    if(getAverage() < 65) {
+            return true;
+        }
+        return false;
+  }
+
+  // get object's name value
+  public String getName() {
+    return this.name;
+  }
+
+  public double getAverage() {
     int total = 0;
 
     for (int grade : this.grades) {
@@ -17,34 +51,4 @@ public student(String id, String
     return total / grades.length;
   } // end getAverage method
 
-//behaviors (methods)
-
-//get the close closeContact status of thr student
-public boolean isCloseContact(){
-
-}//end isCloseContact
-
-public void setCloseContact(boolean value) {
-
-}//end setCloseContact
-
-
-//see if student is failing
-public boolean isFailing(){
-
-
-}//end isFailing
-
-public String getName(){
-
-}//end getName
-
-public double getAverage() {
-    int total = 0;
-
-    for (int grade : this.grades) {
-      total += grade;
-    } // end for-each loop
-    return total / grades.length;
-  } // end getAverage method
-}//end class
+}
