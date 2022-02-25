@@ -1,11 +1,9 @@
 public class Tester{
+  public static void main(String[] args){
+    MetroCard M1 = new Metcard;
+    M1.numUses();
+  }
 
-  private String name;
-  private int numUses;
-
-  public Tester(String n, int nu){
-    this.n = n
-    this.nu = nu
 
 
   }
