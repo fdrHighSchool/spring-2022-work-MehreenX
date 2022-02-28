@@ -6,7 +6,7 @@ public class MetroCard{
 
   public MetroCard(int Time, int numUses, boolean Vaild){
     this.Time = Time;
-    this.numUses = numUses;
+    this.numUses = 3;
     this.Vaild = Vaild;
 
   }//end constructor
@@ -36,7 +36,7 @@ public class MetroCard{
 
  public void numUses(){
    if(this.numUses == 3){
-     System.out.println ("No more rides")
+     return "No more rides";
    }//
  }//end
 
