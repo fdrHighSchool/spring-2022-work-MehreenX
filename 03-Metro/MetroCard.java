@@ -1,7 +1,7 @@
 public class MetroCard{
 
   private int Time;
-  private int numUses;
+  private int numUses = 0;
   private boolean Vaild;
 
   public MetroCard(int Time, int numUses, boolean Vaild){
@@ -10,6 +10,9 @@ public class MetroCard{
     this.Vaild = Vaild;
 
   }//end constructor
+  public void setVaild(boolean e){
+    this.Vaild = e ;
+  }
 
   public boolean getVaild(){
     return this.Vaild;
@@ -21,19 +24,19 @@ public class MetroCard{
 
   public boolean Vaildcard(){
     if((this.Time < 2031 && this.Time > 529) && numUses > 0){
-      return true;
+      return "Vaild";
     }// end if
     else{
-      return false;
+      return "Not vaild! 5am-8pm Only.";
     }// end else
 
   }//end Vaildcard
 
  public void numUses(){
-   if(){
-
-   }
- }//end 
+   if(this.numUses == 3){
+     System.out.println ("No more rides")
+   }//
+ }//end
 
 
 }//end class
