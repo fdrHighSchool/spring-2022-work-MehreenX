@@ -1,7 +1,7 @@
 public class MetroCard{
 
   private int Time;
-  private int numUses = 0;
+  private int numUses;
   private boolean Vaild;
 
   public MetroCard(int Time, int numUses, boolean Vaild){
@@ -13,7 +13,9 @@ public class MetroCard{
   public void setVaild(boolean e){
     this.Vaild = e ;
   }
-
+  public int setnumUses(){
+    this.numUses = 0;
+  }
   public boolean getVaild(){
     return this.Vaild;
   }//end getVaild
