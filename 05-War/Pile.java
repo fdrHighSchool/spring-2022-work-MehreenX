@@ -2,19 +2,35 @@ import java.util.*;
 
 public class Pile {
 
-  private int ArrayList<Card> pile; //ArrayList of Cards  to store
+  private ArrayList<Card> pile; //ArrayList of Cards  to store
+  private ArrayList<Card> pile1;
+  private ArrayList<Card> pile2;
 
-  public CardPile(){
-    pile = new ArrayList<Card>();
+  public Pile(){
+    this.pile  = p;
+    this.pile1 = new ArrayList<Card>();
+    this.pile2 = new ArrayList<Card>();
   }//end CardPile
 
-  public void addCard(C){
-    pile.add(C); // puts a Card at the end ("bottom") of the pile.
+  public ArrayList<Card> getP1(){
+    return this.pile1;
+  }
+  public ArrayList<Card> getP2(){
+    return this.pile2;
+  }
+
+  public void seperate(){
+    for(int = 0; i < 26; i++){
+      this.pile1.add(pile.get(i));
+    }
+    for(int i = this.pile.size()/2; i < 52; i++){
+      this.pile2.add(pile.get(i));
+
+    }
+
   }//end addCard
 
-  public Card getTopCard(){
-    return pile.remove(0); //removes and returns the "top" card of the pile.
-  }//end getTopCard
+  
 
 
 
