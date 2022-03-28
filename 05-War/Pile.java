@@ -12,10 +12,10 @@ public class Pile {
     this.pile2 = new ArrayList<Card>();
   }//end CardPile
 
-  public ArrayList<Card> getP1(){
+  public ArrayList<Card> getPile1(){
     return this.pile1;
   }
-  public ArrayList<Card> getP2(){
+  public ArrayList<Card> getPile2(){
     return this.pile2;
   }
 
@@ -30,7 +30,7 @@ public class Pile {
 
   }//end addCard
 
-  
+
 
 
 
